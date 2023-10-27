@@ -241,7 +241,7 @@
   }
 
   .slick-arrow {
-    
+
     background-color: #000;
     display: flex;
     align-items: center;
@@ -264,7 +264,7 @@
   .slick-prev {
     right: 53px;
   }
-  
+
 
   .slick-dots {
     display: flex;
@@ -293,6 +293,121 @@
           height: 22px;
         }
       }
+    }
+  }
+}
+
+.commercial {
+  padding: 30px 0 30px 0;
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    @extend %oswald-400;
+    line-height: 0;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 29px 12px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/border-com.svg');
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+
+  &__list-item {
+    max-width: 235px;
+    min-height: 141px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %transition;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    &:hover {
+      background-color: #F0F2F2;
+    }
+  }
+}
+
+.features {
+  padding-bottom: 30px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    min-height: 898px;
+    text-align: left
+  }
+
+  &__list-title {
+    @extend %oswald-600;
+    font-size: 48px;
+    line-height: 62px;
+    text-transform: uppercase;
+
+    &--large {
+      font-size: 96px;
+      font-style: normal;
+      line-height: 110px;
+    }
+  }
+
+  &__list-text {
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 37px;
+    letter-spacing: 0.22px;
+    margin-bottom: 51px;
+  }
+
+  &__list-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &:nth-child(1) {
+      justify-content: center;
+      align-items: flex-end;
+      padding-right: 64px;
+    }
+
+    &:nth-child(2) {
+      grid-row: span 2;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding-bottom: 100px;
+      padding-left: 86px;
+    }
+
+    &:nth-child(3) {
+      justify-content: center;
+      padding-left: 94px;
+      align-items: flex-start;
     }
   }
 }
