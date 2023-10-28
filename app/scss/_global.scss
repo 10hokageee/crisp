@@ -22,3 +22,17 @@ body {
   border: 2px solid #000;
   padding: 12px 40px;
 }
+
+.title {
+  @extend %oswald-500;
+  font-size: 56px;
+  line-height: 72px;
+  text-transform: uppercase;
+}
+
+.text {
+  @extend %roboto-400;
+  font-size: 25px;
+  line-height: 37px;
+  letter-spacing: 0.25px;
+}
