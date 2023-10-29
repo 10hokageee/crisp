@@ -36,3 +36,28 @@ body {
   line-height: 37px;
   letter-spacing: 0.25px;
 }
+
+.catalog-card {
+  max-width: 344px;
+
+  &--sale {
+    position: relative;
+
+    .main-catalog__list-price {
+      color: #EB5757;
+    }
+
+    &::after {
+      content: '30%';
+      color: #FFF;
+      @extend %oswald-400;
+      font-size: 14px;
+      padding: 5px 5px;
+      line-height: normal;
+      top: 15px;
+      left: 0;
+      background-color: #000;
+      position: absolute;
+    }
+  }
+}
