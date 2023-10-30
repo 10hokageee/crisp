@@ -760,6 +760,377 @@
       background-size: cover;
     }
   }
+}
+
+.preview {
+  padding-top: 21px;
+
+  &__inner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 78px 0;
+  }
+
+  &__content {
+    max-width: 693px;
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    position: relative;
+    padding: 19px 56px 0 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 498px;
+      height: 100px;
+      background-image: url('../images/icons/border.svg');
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+}
+
+.breadcrumbs {
+  padding-bottom: 18px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    color: #828282;
+    font-size: 14px;
+    @extend %roboto-400;
+    line-height: 68px;
+
+    &:last-child {
+      color: #000;
+    }
+  }
+}
+
+.catalog {
+
+  &__filters {
+    max-width: 355px;
+    padding-right: 39px;
+    border-right: 1px solid #C4C4C4;
+  }
+}
+
+.filter {
+  &__title {
+    color: #000;
+    @extend %oswald-400;
+    font-size: 24px;
+    line-height: 68px;
+    margin-bottom: 31px;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+  }
+}
+
+.filter-info {
+
+  &__label {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    color: #3F3F3F;
+    @extend %roboto-400;
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding-left: 19px;
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    overflow: hidden;
+    margin-top: -2px;
+    margin-right: 10px;
+
+    &:checked+.filter-info__checkbox {
+      background-image: url('../images/icons/check.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #000;
+      border: 1px solid transparent;
+    }
+  }
+
+  &__checkbox {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 1px solid #828282;
+    margin-top: -5px;
+  }
+}
+
+.filter-size {
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  &__label {
+    display: inherit;
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    overflow: hidden;
+
+    &:checked+.filter-size__checkbox {
+      color: #000;
+      border: 1px solid #000;
+    }
+  }
+
+  &__checkbox {
+    color: #828282;
+    @extend %oswald-400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: 1px solid #C4C4C4;
+    padding: 15px;
+  }
+}
+
+.filter-length {
+
+  &__label {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    color: #3F3F3F;
+    @extend %roboto-400;
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding-left: 19px;
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    overflow: hidden;
+
+    &:checked+.filter-length__checkbox {
+      background-image: url('../images/icons/check.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #000;
+      border: 1px solid transparent;
+    }
+  }
+
+  &__checkbox {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 1px solid #828282;
+    margin-top: -5px;
+  }
+}
+
+.filter-color {
+
+  &__form {
+    max-width: 210px;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 18px;
+    margin-right: 20px;
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    overflow: hidden;
+
+    &:checked+.filter-color__checkbox {
+      border: 2px solid #000;
+    }
+  }
+
+  &__checkbox {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    padding: 3px;
+    border: 2px solid transparent;
+
+    &--dark {
+      background-color: #292A2D;
+    }
+
+    &--white {
+      background-color: #F3ECE2;
+    }
+
+    &--blue {
+      background-color: #24426A;
+    }
+
+    &--purple {
+      background-color: #18574A;
+    }
+
+    &--green {
+      background-color: #666689;
+    }
+
+    &--yellow {
+      background-color: #C2BEB6;
+    }
+
+    &--grey {
+      background-color: #AAABA7;
+    }
+
+    &--red {
+      background-color: #971E34;
+    }
+
+    &--orange {
+      background-color: #CBA13E;
+    }
+
+    &--brown {
+      background-color: #73513C;
+      ;
+    }
+
+    &--pink {
+      background-color: #DAB1B1;
+    }
+
+    &--turquoise {
+      background-color: #2B9FA7;
+    }
+  }
+}
+
+.filter-range {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend %roboto-400;
+    font-size: 14px;
+    line-height: 8px;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    color: #828282;
+    @extend %oswald-500;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 12px 37px;
+    border: 2px solid #828282;
+    margin-left: auto;
+  }
+
+  .irs--flat .irs-line {
+    top: 25px;
+    height: 2px;
+    background-color: #BDBDBD;
+    border-radius: 0;
+  }
+
+  .irs--flat {
+    margin-bottom: 26px;
+}
+
+  .irs--flat .irs-handle {
+    top: 17px;
+    width: 6px;
+    height: 20px;
+    background-color: #000;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background-color: #000;
+  }
+
+  .irs-bar {
+    position: absolute;
+    display: block;
+    background-color: #000;
+    left: 0;
+    width: 0;
+    height: 2px;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    display: none;
+  }
+
+  .irs--flat .irs-min,
+  .irs--flat .irs-max {
+    display: none;
+  }
 
 }
 
