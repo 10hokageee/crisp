@@ -29,7 +29,27 @@ $(".filter-range__input").ionRangeSlider({
     
 },
 
+});
+
+$(".product-slide__thumb").slick({
+  asNavFor: '.product-slide__big',
+  arrows: false,
+  focusOnSelect: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  vertical: true,
+  draggable: false
+});
+
+$(".product-slide__big").slick({
+  asNavFor: '.product-slide__thumb',
+  arrows: false,
+  draggable: false
+});
+
+$(".product-filter__price-input").styler({
 
 });
+
 });
 

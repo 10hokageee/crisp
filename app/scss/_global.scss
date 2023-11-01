@@ -61,3 +61,16 @@ body {
     }
   }
 }
+
+.product-container {
+  max-width: 1241px;
+  margin: 0 auto;
+}
+
+.product-title {
+  @extend %oswald-400;
+  font-size: 14px;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
