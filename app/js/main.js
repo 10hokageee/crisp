@@ -51,5 +51,30 @@ $(".product-filter__price-input").styler({
 
 });
 
+
+
+$( ".product-info__title-1").on( "click", function() {
+  $(".product-info__item-1").slideToggle( "slow", function() {
+  });
+  $(".product-info__item-1").css("display", "flex");
+});
+
+$( ".product-info__title-2").on( "click", function() {
+  $(".product-info__item-2").slideToggle( "slow", function() {
+  });
+  $(".product-info__item-2").css("display", "flex");
+});
+
+$( ".product-info__title-3").on( "click", function() {
+  $(".product-info__item-3").slideToggle( "slow", function() {
+  });
+  $(".product-info__item-3").css("display", "flex");
+});
+
+$( ".product-info__title").on( "click", function() {
+  $(this).toggleClass("product-info__title--active");
+});
+
+
 });
 
