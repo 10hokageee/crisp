@@ -1610,6 +1610,7 @@
 
 .minus {
   left: 19px;
+  display: block;
 
   &::after {
     position: absolute;
@@ -1644,6 +1645,19 @@
     top: 50%;
     transform: translateY(-50%);
     left: 4px;
+  }
+}
+
+.cards {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 26px;
   }
 }
 

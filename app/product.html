@@ -327,13 +327,15 @@
                       value="1"
                       min="1"
                       type="number"
+                      id="inputNumber"
                     />
-                    <span class="product-filter__price-cost">90,00 EUR</span>
+                    <span class="sr-only" id="multiplier">90,00</span>
+                    <span class="product-filter__price-cost" id="result">90.00</span>EUR
                   </label>
                   <button
                     class="product-filter__price-btn product-filter__price-btn--black"
-                    type="submit"
-                  >
+                    data-add
+                    type="submit">
                     Add to bag
                   </button>
                   <button class="product-filter__price-btn" type="submit">
@@ -482,6 +484,93 @@
         </div>
       </section>
 
+      <section class="cards">
+        <div class="container">
+          <div class="benefits__box">
+            <h3 class="benefits__title">
+              Featured Items
+            </h3>
+            <a class="benefits__link" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#prev-arrow"></use>
+              </svg>
+            </a>
+          </div>
+          <ul class="cards__list">
+            <li class="cards__list-item">
+              <article class="catalog-card">
+                <img
+                class="main-catalog__list-img"
+                src="images/main-catalog/5.jpg"
+                alt=""
+              />
+              <span class="main-catalog__list-category">TOP women</span>
+              <p class="main-catalog__list-text">
+                Angels malu zip jeans slim black used
+              </p>
+              <span class="main-catalog__list-price">139,00 EUR</span>
+              </article>
+            </li>        
+            <li class="cards__list-item">
+              <article class="catalog-card">
+                <img
+                class="main-catalog__list-img"
+                src="images/main-catalog/5.jpg"
+                alt=""
+              />
+              <span class="main-catalog__list-category">TOP women</span>
+              <p class="main-catalog__list-text">
+                Angels malu zip jeans slim black used
+              </p>
+              <span class="main-catalog__list-price">139,00 EUR</span>
+              </article>
+            </li>        
+            <li class="cards__list-item">
+              <article class="catalog-card">
+                <img
+                class="main-catalog__list-img"
+                src="images/main-catalog/5.jpg"
+                alt=""
+              />
+              <span class="main-catalog__list-category">TOP women</span>
+              <p class="main-catalog__list-text">
+                Angels malu zip jeans slim black used
+              </p>
+              <span class="main-catalog__list-price">139,00 EUR</span>
+              </article>
+            </li>        
+            <li class="cards__list-item">
+              <article class="catalog-card">
+                <img
+                class="main-catalog__list-img"
+                src="images/main-catalog/5.jpg"
+                alt=""
+              />
+              <span class="main-catalog__list-category">TOP women</span>
+              <p class="main-catalog__list-text">
+                Angels malu zip jeans slim black used
+              </p>
+              <span class="main-catalog__list-price">139,00 EUR</span>
+              </article>
+            </li>        
+            <li class="cards__list-item">
+              <article class="catalog-card">
+                <img
+                class="main-catalog__list-img"
+                src="images/main-catalog/5.jpg"
+                alt=""
+              />
+              <span class="main-catalog__list-category">TOP women</span>
+              <p class="main-catalog__list-text">
+                Angels malu zip jeans slim black used
+              </p>
+              <span class="main-catalog__list-price">139,00 EUR</span>
+              </article>
+            </li>        
+          </ul>
+        </div>
+      </section>
+
       <div class="advantages">
         <div class="container">
           <ul class="advantages__list">
@@ -606,15 +695,16 @@
             </li>
 
             <li class="footer-nav__item">
-              <form class="footer-nav__form" action="#">
+              <form class="footer-nav__form">
                 <h3 class="footer-nav__title">join us</h3>
                 <p class="footer-nav__text">Subscribe to our newsletters</p>
-                <label class="footer-nav__label" for="#">
+                <label class="footer-nav__label" for="email">
                   <input
                     class="footer-nav__input"
                     required
                     placeholder="Email Address"
                     type="email"
+                    name="email"
                   />
                 </label>
                 <button class="footer-nav__btn" type="submit">
